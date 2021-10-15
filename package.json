@@ -26,7 +26,10 @@
   "author": "Maribel Maza",
   "license": "MIT",
   "bin": {
-     "md-links": "cli.js"
+    "md-links": "cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "bugs": {
     "url": "https://github.com/mysticBel/LIM015-md-links/issues"
