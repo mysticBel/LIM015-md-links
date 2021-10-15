@@ -120,17 +120,17 @@ If we pass a non existant option, the output will be a help menu with an 'invali
 
 
 
-
+#### `no option`
 #### What if we put a wrong path or a non-existance file?
 
-the output will be a 'links not found' message and the path doesn't exist.
+If we do not pass any option(s) , the output will be a 'links not found' message and the path doesn't exist.
 
 ![image6-wrong-path](./images/image6-wrong-path.png)
 
 
 #### What if we put a path without an option?
 
-the output will be a an array with all the links extrated fro the file.
+the output will be an array with all the links extracted from the file.
 
 ![image7-no-opt](./images/image7.png)
 
@@ -148,15 +148,11 @@ the output will be a an array with all the links extrated fro the file.
 
 ## 5. Learning Objectives
 
-
-...
----
-
 ## Checklist
 
 ### General
 
-- [ ] Can be installed via `npm install --global <github-user>/md-links`
+- [✔️🐱] Can be installed via `npm install --global <github-user>/md-links`
 
 ### `README.md`
 
