@@ -1,7 +1,7 @@
 {
-  "name": "md-links-mysticbel",
+  "name": "mysticbel-mdlinks",
   "version": "0.1.0",
-  "description": "md-Links",
+  "description": "This library allows you to find links within markdown files, filter them in an array, validate them, provide statistics and look for broken links. Project for Laboratoria ",
   "main": "index.js",
   "directories": {
     "test": "test"

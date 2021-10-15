@@ -26,10 +26,10 @@
 ## Index
 
 - [1. About md-links](#1-About-md-links)
-- [2. How to install mdLinks?](#3-How-to-install-mdLinks-?)
-- [3. Flowchart](#2-Flowchart)
-- [4. Backlog & Planning](#3-Backlog-&-Planning)
-- [5. Learning goals](#4-Learning-goals)
+- [2. How to install mdLinks?](#2-How-to-install-mdLinks-?)
+- [3. Flowchart](#3-Flowchart)
+- [4. Backlog & Planning](#4-Backlog-&-Planning)
+- [5. Learning goals](#5-Learning-goals)
 
 
 ---
@@ -45,9 +45,9 @@ These Markdown files usually contain links that are often broken or no longer va
 
 In this project, `md-links` is an executable that reads and analyzes files in Markdown format, to verify the links they contain and report some statistics.
 
- Options:🐾🐿️
-- Validate Links(OK, Fail)
-- Stats Links(total, unique, broken)
+ Options:
+- `--validate` (OK, Fail)
+- `--stats`    (total, unique, broken)
 
 
 ## 2. How to install mdLinks?
@@ -55,7 +55,17 @@ In this project, `md-links` is an executable that reads and analyzes files in Ma
 
 
 ## ⬇️Install :
- Install this library with this command :   `  npm install -g ?  `
+ Install this library with this command :   
+
+
+```
+npm install mysticbel-mdlinks
+```
+or you can also download it from github:
+
+```
+npm install mysticbel/LIM015-md-links
+```
 
 
 ## 🔍Usage:
@@ -76,11 +86,58 @@ In this project, `md-links` is an executable that reads and analyzes files in Ma
 
 ``` 
 
+## Options:
+
+#### `--validate`
+
+If we pass the `--validate` option, the module must make an HTTP request to find out if the link works or not. If the link results in a redirect to a URL that responds ok, then we will treat the link as ok.
+
+Example:
+![validate](./images/image1-v.png)
+
+#### `--stats`
+
+If we pass the `--stats` option, the output will be a text with basic statistics about the links. 
+
+Example:
+![stats](./images/image2-s.png)
+
+We can also combine `--stats` and` --validate` to obtain needed statistics from the validation results. 
+
+![val&stats](./images/image3-v-s.png)
+
+#### `--help`
+
+If we pass the `--help` option, the output will be a help menu with all commands.
+
+![help](./images/image4-h.png)
+
+#### `other option`
+
+If we pass a non existant option, the output will be a help menu with an 'invalid command' message.
+
+![opt-not-valid](./images/image5-opt-not-valid.png)
+
+
+
+
+#### What if we put a wrong path or a non-existance file?
+
+the output will be a 'links not found' message and the path doesn't exist.
+
+![image6-wrong-path](./images/image6-wrong-path.png)
+
+
+#### What if we put a path without an option?
+
+the output will be a an array with all the links extrated fro the file.
+
+![image7-no-opt](./images/image7.png)
 
 
 ## 3. Flowchart
 
-...
+![CLI](./images/CLI-diagram.png)
 
 
 ## 4. Backlog & Planning
@@ -94,42 +151,44 @@ In this project, `md-links` is an executable that reads and analyzes files in Ma
 
 ...
 ---
+
 ## Checklist
 
 ### General
 
-- [ ] Puede instalarse via `npm install --global <github-user>/md-links`
+- [ ] Can be installed via `npm install --global <github-user>/md-links`
 
 ### `README.md`
 
-- [✔️🐳] Un board con el backlog para la implementación de la librería.
-- [ ] Documentación técnica de la librería.
-- [ ] Guía de uso e instalación de la librería
+- [✔️🐳] A board with the backlog for the implementation of the library. 
+- [✔️🐳] Technical documentation of the library. 
+- [✔️🐳] Library installation and use guide.
 
 ### API `mdLinks(path, opts)`
 
-- [✔️🐼 ] El módulo exporta una función con la interfaz (API) esperada.
-- [✔️🐼 ] Implementa soporte para archivo individual
-- [✔️🐼 ] Implementa soporte para directorios
-- [✔️🐼 ] Implementa `options.validate`
+- [✔️🐼] The module exports a function with the expected interface (API). 
+- [✔️🐼] Implement single file support.
+- [✔️🐼] Implement directory support.
+- [✔️🐼] Implement `options.validate`
 
 ### CLI
 
-- [ ] Expone ejecutable `md-links` en el path (configurado en `package.json`)
-- [ ] Se ejecuta sin errores / output esperado
-- [✔️🦄] Implementa `--validate`
-- [✔️🦄] Implementa `--stats`
+- [✔️🦄] Exposes executable `md-links` in the path (configured in `package.json`) 
+- [✔️🦄] Runs without errors / expected output 
+- [✔️🦄] Implement `--validate`
+- [✔️🦄] Implement `--stats`
 
-### Pruebas / tests
+### Unit tests
 
-- [✔️🐱] Pruebas unitarias cubren un mínimo del 70% de statements, functions,
-      lines, y branches.
-- [✔️🐱] Pasa tests (y linters) (`npm test`).
+- [✔️🐱] Unit tests cover a minimum of 70% of statements, functions, lines, and branches. 
+- [✔️🐱] Pass tests (and linters) (`npm test`).
 
 
 ![test](./images/testing-api.png)
 
----
+
+
+
 ### NodeSchool workshoppers
 
 - [learnyounode](https://github.com/workshopper/learnyounode)
@@ -170,5 +229,6 @@ In this project, `md-links` is an executable that reads and analyzes files in Ma
 
 ![image](https://media.giphy.com/media/81jB1QNsrfvNRuR9Xn/giphy.gif)
 <br>
-'md-links' is a project done for [Laboratoria](https://github.com/Laboratoria) ,October 2021 🤗
-<br><a href="https://www.linkedin.com/in/maribel-maza/"><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=flat&logo=linkedin&logoColor=white"/></a> <a href="https://github.com/mysticBel"><img alt="Github" src="https://img.shields.io/github/followers/mysticBel?label=follow&style=social"/></a> &nbsp;
+'md-links' is a project done by Maribel Maza for [Laboratoria](https://github.com/Laboratoria) , <br>October 2021 🤗
+<br><br><br>
+<a href="https://www.linkedin.com/in/maribel-maza/"><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=flat&logo=linkedin&logoColor=white"/></a> <a href="https://github.com/mysticBel"><img alt="Github" src="https://img.shields.io/github/followers/mysticBel?label=follow&style=social"/></a> &nbsp;
