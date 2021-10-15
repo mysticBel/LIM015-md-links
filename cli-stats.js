@@ -85,6 +85,11 @@ const msgNotLinks =`
 █── ▀█▀ █──█ █▀▄ ▀▀█ 　 █──█ █──█ ──█── 　 █▀▀ █──█ █──█ █──█ █──█ 　 ─ █─ 
 ▀▀▀ ▀▀▀ ▀──▀ ▀─▀ ▀▀▀ 　 ▀──▀ ▀▀▀▀ ──▀── 　 ▀── ▀▀▀▀ ─▀▀▀ ▀──▀ ▀▀▀─ 　 ▀ ▀▄`
 
+const commandInvalidMsg =`
+
+
+█ █▄░█ █░█ ▄▀█ █░░ █ █▀▄   █▀▀ █▀█ █▀▄▀█ █▀▄▀█ ▄▀█ █▄░█ █▀▄   ▀ ░░▄▀
+█ █░▀█ ▀▄▀ █▀█ █▄▄ █ █▄▀   █▄▄ █▄█ █░▀░█ █░▀░█ █▀█ █░▀█ █▄▀   ▄ ▄▀░░\n (ɔ*w*)ɔ ---Please, try again --- ♥ `
 const helloMsgValidate =   `
 
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
@@ -163,7 +168,8 @@ module.exports = {
     helloMsgStats,
     helloMsgValidateAndStats,
     msgErrorRoute,
-    msgNotLinks
+    msgNotLinks,
+    commandInvalidMsg
 }
 
 
