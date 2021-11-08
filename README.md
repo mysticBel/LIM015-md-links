@@ -138,7 +138,7 @@ the output will be an array with all the links extracted from the file.
 ## 3. Flowchart
 
 ![CLI](./images/CLI-diagram.png)
-
+![API](./images/API-diagram.png)
 
 ## 4. Backlog & Planning
 
